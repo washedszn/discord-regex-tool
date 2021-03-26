@@ -27,7 +27,7 @@ client.on('message', msg => {
         msg.channel.send('Please enter a white space filler. Send `blank` if empty.')
 
         collector.on('collect', m => {
-            result = m.content != 'blank' ? result.replace(' ', m.content) : null;
+            result = m.content != 'blank' ? result.replace(' ', m.content) : result;
             collector.stop()
         });
 
